@@ -1,15 +1,206 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NerologyLAB · Kurumsal</title>
-  <meta name="description" content="NerologyLAB Health — bilimsel temelli, etik gıda takviyesi. Neronlab markasının üretici ve ruhsat sahibi şirketi." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>NerologyLAB · Kurumsal</title>
+<meta name="description" content="NerologyLAB Health — bilimsel temelli, etik gıda takviyesi. Neronlab markasının üretici ve ruhsat sahibi şirketi."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0b1210;--bg2:#121a17;--card:#17201c;--line:rgba(212,197,160,.18);--gold:#c4a574;--gold2:#e8d9b8;--text:#f4f1ea;--muted:#a8b0a8;--max:1100px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(100% - 2.5rem,var(--max));margin-inline:auto}
+.topbar{background:#0a0f0d;border-bottom:1px solid var(--line);font-size:.8rem;color:var(--muted);padding:.55rem 0;text-align:center}
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(11,18,16,.88);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;gap:1rem}
+.logo{font-weight:600;letter-spacing:.04em;font-size:1.05rem}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:1.5rem;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+.nav-links a:hover{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.75rem 1.25rem;border-radius:999px;border:1px solid transparent;font-size:.9rem;font-weight:500;transition:.2s;cursor:pointer}
+.btn-gold{background:var(--gold);color:#1a140c}
+.btn-gold:hover{filter:brightness(1.08)}
+.btn-ghost{border-color:var(--line);color:var(--text);background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold2)}
+.hero{padding:5rem 0 4rem;background:radial-gradient(ellipse 80% 60% at 70% 20%,rgba(196,165,116,.12),transparent 55%),linear-gradient(180deg,#0e1613,var(--bg))}
+.hero-grid{display:grid;grid-template-columns:1.2fr .9fr;gap:3rem;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.nav-links{display:none}}
+.eyebrow{color:var(--gold);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem;font-weight:500}
+.hero h1{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(2.3rem,5vw,3.5rem);font-weight:500;line-height:1.15;margin-bottom:1.2rem;color:#fff}
+.lead{color:var(--muted);font-size:1.05rem;max-width:34rem;margin-bottom:2rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.hero-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.75rem}
+.hero-card h3{font-size:.95rem;margin-bottom:1rem;color:var(--gold2)}
+.stat{padding-bottom:1rem;border-bottom:1px solid var(--line);margin-bottom:1rem}
+.stat:last-child{border:0;padding:0;margin:0}
+.stat strong{display:block;font-size:1.1rem;color:#fff;margin-bottom:.2rem}
+.stat span{color:var(--muted);font-size:.88rem}
+section{padding:4rem 0}
+.section-label{color:var(--gold);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.75rem;font-weight:500}
+h2{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:500;line-height:1.2;margin-bottom:1rem;color:#fff}
+.intro{color:var(--muted);max-width:38rem;margin-bottom:2.2rem}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+@media(max-width:800px){.grid-3{grid-template-columns:1fr}}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:1.5rem;height:100%}
+.card h3{font-size:1.05rem;margin-bottom:.6rem;color:var(--gold2)}
+.card p{color:var(--muted);font-size:.95rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+@media(max-width:800px){.split{grid-template-columns:1fr}}
+.list{list-style:none;display:grid;gap:.85rem}
+.list li{display:flex;gap:.75rem;color:var(--muted);font-size:.95rem}
+.list li::before{content:"";width:6px;height:6px;margin-top:.55rem;border-radius:50%;background:var(--gold);flex-shrink:0}
+.brand-band{background:linear-gradient(135deg,#15201b,#1c2822);border:1px solid var(--line);border-radius:20px;padding:2.25rem;display:grid;grid-template-columns:1.3fr .7fr;gap:2rem;align-items:center}
+@media(max-width:800px){.brand-band{grid-template-columns:1fr}}
+.brand-band h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.8rem;font-weight:500;margin-bottom:.75rem}
+.brand-band p{color:var(--muted);margin-bottom:1.25rem}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.pill{border:1px solid var(--line);border-radius:999px;padding:.35rem .8rem;font-size:.8rem;color:var(--gold2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+@media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
+.contact-item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.35rem}
+.contact-item small{display:block;color:var(--gold);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem}
+footer{border-top:1px solid var(--line);padding:2.5rem 0 2rem;margin-top:2rem}
+.footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;margin-bottom:1.5rem}
+.footer-muted{color:var(--muted);font-size:.85rem;max-width:36rem}
+.legal{border-top:1px solid var(--line);padding-top:1.25rem;color:var(--muted);font-size:.8rem;display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;justify-content:space-between}
+.disclaimer{margin-top:1rem;font-size:.78rem;color:#7d8680;max-width:48rem}
+.badge{position:fixed;bottom:1rem;right:1rem;background:rgba(196,165,116,.95);color:#1a140c;font-size:.75rem;font-weight:600;padding:.45rem .8rem;border-radius:999px;z-index:100}
+</style>
 </head>
 <body>
-<p>Yükleniyor… Tam içerik artifacts dosyasında. Yeniden deploy edilecek.</p>
+<div class="badge">DEMO · nerologylab.com</div>
+<div class="topbar">T.C. Tarım ve Orman Bakanlığı onaylı takviye edici gıda · Onay no. 019058</div>
+<header>
+<div class="wrap nav">
+<a class="logo" href="#ust">Nerology<span>LAB</span></a>
+<nav class="nav-links">
+<a href="#sirket">Şirket</a><a href="#yaklasim">Yaklaşım</a><a href="#marka">Marka</a><a href="#kalite">Kalite</a><a href="#iletisim">İletişim</a>
+</nav>
+<a class="btn btn-gold" href="https://neronlab.com" target="_blank" rel="noopener">Neronlab Mağaza</a>
+</div>
+</header>
+<main>
+<section class="hero" id="ust">
+<div class="wrap hero-grid">
+<div>
+<p class="eyebrow">Kurumsal · İstanbul</p>
+<h1>Doğayı laboratuvara taşıyan şirket.</h1>
+<p class="lead">NerologyLAB Health, bilimsel temelli ve etik gıda takviyesi alanında faaliyet gösterir. Tüketici markası <strong style="color:var(--gold2)">Neronlab</strong> ile Aslan Yelesi Mantarı (Hericium erinaceus) formülasyonunu ölçülebilir standartlarla sunar.</p>
+<div class="hero-actions">
+<a class="btn btn-gold" href="#marka">Markayı incele</a>
+<a class="btn btn-ghost" href="#iletisim">İletişime geç</a>
+</div>
+</div>
+<aside class="hero-card">
+<h3>Kurumsal özet</h3>
+<div class="stat"><strong>NEROLOGY LAB İlaç ve Kozmetik Ltd. Şti.</strong><span>Yasal unvan · Şişli / İstanbul</span></div>
+<div class="stat"><strong>019058</strong><span>T.C. Bakanlık takviye edici gıda onay no.</span></div>
+<div class="stat"><strong>Neronlab</strong><span>Dış marka · neronlab.com</span></div>
+<div class="stat"><strong>1000 mg · 20:1</strong><span>Aslan Yelesi Mantarı tablet formülasyonu</span></div>
+</aside>
+</div>
+</section>
+<section id="sirket">
+<div class="wrap">
+<p class="section-label">Şirket</p>
+<h2>Kim olduğumuz</h2>
+<p class="intro">NerologyLAB, gıda takviyesini abartıdan uzak, şeffaf ve kontrollü bir çerçevede ele alır. Üretim ve pazarlama kararlarında kanıt sınırı korunur; ürün gıda takviyesidir, ilaç değildir.</p>
+<div class="grid-3">
+<article class="card"><h3>Misyon</h3><p>Uluslararası kalite anlayışına yakın, etik ve kontrollü süreçlerle güvenilir takviye sunmak. Etiketi okunur kılmak; vaadi belgenin sınırında tutmak.</p></article>
+<article class="card"><h3>Vizyon</h3><p>Türkiye’de ve daha geniş pazarda güvenilirliğiyle tanınan bir marka yapısı kurmak. Gürültülü wellness dilinin değil, netliğin yanında durmak.</p></article>
+<article class="card"><h3>Değerler</h3><p>Güvenilirlik, kalite, müşteri odaklılık, yenilikçilik ve etik duruş. Her metin ve her formülasyon bu beş ilkeye bağlanır.</p></article>
+</div>
+</div>
+</section>
+<section id="yaklasim" style="background:var(--bg2)">
+<div class="wrap split">
+<div>
+<p class="section-label">Yaklaşım</p>
+<h2>Doğa hammaddedir.<br/>Laboratuvar süzgeçtir.</h2>
+<p class="intro" style="margin-bottom:1.5rem">Neronlab ürünleri, Aslan Yelesi Mantarı’nın (Lion’s Mane / Hericium erinaceus) 20:1 konsantre ekstraktını 1000 mg tablet formunda sunar. Vaat: zihinsel netlik, odak ve günlük yaşam kalitesi. Tedavi iddiası yoktur.</p>
+</div>
+<ul class="list">
+<li>Formülasyon disiplini: oran, doz ve etiket tutarlılığı</li>
+<li>Kalite kontrol: hammadde ve süreç belgeleri</li>
+<li>Mevzuat uyumu: takviye edici gıda çerçevesi</li>
+<li>Şeffaf iletişim: onay numarası ve analiz referansı</li>
+<li>Satış kanalları: neronlab.com ve yetkili pazaryerleri</li>
+<li>Destek: hızlı, net, abartısız müşteri yanıtı</li>
+</ul>
+</div>
+</section>
+<section id="marka">
+<div class="wrap">
+<p class="section-label">Marka portföyü</p>
+<h2>Neronlab</h2>
+<p class="intro">Dış iletişimde kullanılan marka adıdır. Slogan: <em>Doğadan Gelen Bilim, Bilimin Işığında Güven.</em></p>
+<div class="brand-band">
+<div>
+<h3>Aslan Yelesi Mantarı 1000 mg</h3>
+<p>Hericium erinaceus 20:1 ekstrakt tablet. 60 tablet, 120 tablet ve 2’li paket seçenekleri. Güncel fiyat, stok ve sipariş için tüketici sitesi neronlab.com üzerinden ilerlenir.</p>
+<div class="pills">
+<span class="pill">20:1 ekstrakt</span>
+<span class="pill">1000 mg / tablet</span>
+<span class="pill">Onay 019058</span>
+<span class="pill">Ücretsiz kargo</span>
+<span class="pill">15 iş günü iade</span>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:.75rem">
+<a class="btn btn-gold" href="https://neronlab.com" target="_blank" rel="noopener">neronlab.com</a>
+<a class="btn btn-ghost" href="https://neronlab.com" target="_blank" rel="noopener">Ürünleri gör</a>
+</div>
+</div>
+</div>
+</section>
+<section id="kalite" style="background:var(--bg2)">
+<div class="wrap">
+<p class="section-label">Kalite ve uyum</p>
+<h2>Belge konuşur</h2>
+<p class="intro">Güven, sloganla değil süreçle kurulur. Aşağıdaki unsurlar kurumsal iletişimde tutarlı şekilde kullanılır.</p>
+<div class="grid-3">
+<article class="card"><h3>Bakanlık onayı</h3><p>T.C. Tarım ve Orman Bakanlığı takviye edici gıda onayı. Onay numarası: <strong style="color:var(--text)">019058</strong>.</p></article>
+<article class="card"><h3>Analiz yaklaşımı</h3><p>Hammadde ve kalite kontrol belgeleri saklanır. Bitmiş ürün analizi, etiket ve tanıtım iddialarını desteklemek için ayrı süreçtir.</p></article>
+<article class="card"><h3>Yasal çerçeve</h3><p>Ürünler gıda takviyesidir; ilaç yerine geçmez. Hastalık tedavi vaadi ve abartılı klinik iddia kullanılmaz.</p></article>
+</div>
+</div>
+</section>
+<section id="iletisim">
+<div class="wrap">
+<p class="section-label">İletişim</p>
+<h2>Bize ulaşın</h2>
+<p class="intro">Destek taleplerine en geç 24 saat içinde dönüş hedeflenir. Hafta içi 09:00–18:00.</p>
+<div class="contact-grid">
+<div class="contact-item"><small>Adres</small><p>Cumhuriyet Mah., Kazım Orbay Cad. No: 24/1<br/>İç Kapı No: 10, Şişli / İstanbul</p></div>
+<div class="contact-item"><small>Telefon</small><p><a href="tel:+905300705729">+90 (530) 070 57 29</a></p></div>
+<div class="contact-item"><small>E-posta</small><p><a href="mailto:nerologylab@gmail.com">nerologylab@gmail.com</a></p></div>
+<div class="contact-item"><small>Tüketici sitesi</small><p><a href="https://neronlab.com" target="_blank" rel="noopener">neronlab.com</a></p></div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<div class="footer-grid">
+<div>
+<div class="logo" style="margin-bottom:.5rem">Nerology<span>LAB</span></div>
+<p class="footer-muted">Bilimsel temelli, kaliteli ve etik gıda takviyesi. Doğayı laboratuvara taşıyan yaklaşım.</p>
+</div>
+<div style="display:flex;gap:1.25rem;flex-wrap:wrap;color:var(--muted);font-size:.9rem">
+<a href="#sirket">Şirket</a><a href="#marka">Marka</a><a href="#kalite">Kalite</a><a href="#iletisim">İletişim</a><a href="https://neronlab.com" target="_blank" rel="noopener">Mağaza</a>
+</div>
+</div>
+<div class="legal">
+<span>© 2026 NerologyLAB Health · NEROLOGY LAB İlaç ve Kozmetik Ltd. Şti.</span>
+<span>Demo site</span>
+</div>
+<p class="disclaimer">Gıda takviyesi ilaç yerine geçmez. Normal beslenmenin yerine kullanılmaz. Hamilelik, emzirme, kronik hastalık ve ilaç kullanımı varsa hekime danışın. Bu sayfa kurumsal tanıtım demosudur; tıbbi tavsiye içermez.</p>
+</div>
+</footer>
 </body>
 </html>
